@@ -28,7 +28,8 @@
             <% end %>
         </div>
 
-        <%= yield %>
-
+	<div id="<%= params[:controller] + "_" + action_name %>" class='content'>
+            <%= yield %>
+	</div>
     </body>
 </html>
