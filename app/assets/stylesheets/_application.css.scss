@@ -1,7 +1,7 @@
 // Place all the styles related to the static controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-
+@import "font-awesome";
 body{
     width: 100%;
     margin: 0;
@@ -12,25 +12,64 @@ body{
     font-family: arial;
 }
 
-#primary-navigation{
-    width: 100%;
-    height: 32px;
-
-    position: fixed;
-    top: 0;
-    left: 0;
-
-    text-align: right;
-
-    background-color: black;
-
-    a{
-        display: inline-block;
-        margin-left: 10px;
-
-        text-decoration: none;
-        color: white;
-        line-height: 32px;
-        font-size: 24px;
-    }
+/* SASS Mixins */
+@mixin hoverTransitions {
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out; 
 }
+
+@mixin slowHoverTransitions {
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out; 
+}
+
+$dragon_gray: #3d2f1e;
+$blue_dress: #2b4e69;
+$blonde: #ced0c6;
+$stone: #b38460;
+
+#site-nav { 
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: #fff;
+  border-top:2px solid #2b4e69;
+  height: 100px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  position: absolute;
+  z-index: 100000;
+  width: 100%;  
+
+  .brand-logo {
+    line-height: 100px;   
+  }
+
+  .nav-menu {
+    * {
+      opacity: 1;
+    }
+ &.enabled {
+      color:#2b4e69;
+
+      &:hover {
+        color:#2b4e69;
+      }
+    }
+   @include hoverTransitions;    
+    color:#e0e0e0;
+    line-height: 100px;   
+
+    &:hover {
+      cursor: pointer;
+      color: #333;
+    }
+  }
+
+  .button-group {
+    margin-top:16px;
+  }
+}
+
