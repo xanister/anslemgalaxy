@@ -8,8 +8,8 @@ gem 'jquery-rails'
 
 gem 'devise'
 
-
-
+gem 'foundation-rails'
+gem "font-awesome-rails"
 
 
 
