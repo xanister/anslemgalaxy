@@ -6289,7 +6289,7 @@ a.circle-link {
   -ms-user-select: none;
   user-select: none;
   background-color: #fff;
-  border-top: 2px solid #7bc142;
+  border-top: 2px solid #2b4e69;
   height: 100px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   position: absolute;
@@ -6305,9 +6305,9 @@ a.circle-link {
     #site-nav .nav-menu * {
       opacity: 1; }
     #site-nav .nav-menu.enabled {
-      color: #7bc142; }
+      color: #2b4e69; }
       #site-nav .nav-menu.enabled:hover {
-        color: #7bc142; }
+        color: #2b4e69; }
     #site-nav .nav-menu:hover {
       cursor: pointer;
       color: #333; }
@@ -6446,7 +6446,7 @@ a.circle-link {
           transition: all .2s ease-in-out;
           color: #fff; }
           .top-heroes .hero.nav .site-nav h3 a:hover {
-            color: #7bc142; }
+            color: #2b4e69; }
       @media only screen and (max-width: 40em) {
         .top-heroes .hero.nav .site-nav h3 {
           font-size: 2rem;
@@ -6515,7 +6515,7 @@ a.circle-link {
       font-family: 'Uni-Sans-Regular';
       font-size: 1.6rem;
       line-height: 2.4rem;
-      color: #7bc142;
+      color: #2b4e69;
       margin-top: 160px; }
 
 /* Heroes - Media Queries */
@@ -6529,7 +6529,7 @@ a.circle-link {
         font-size: 1.6rem;
         line-height: 2.4rem;
         text-align: left;
-        color: #7bc142;
+        color: #2b4e69;
         margin-top: 20px; } }
 body.home .props {
   padding: 44px 0;
@@ -6848,7 +6848,7 @@ body.about .leadership {
     font-size: 1.9rem;
     line-height: 1.9rem;
     margin-bottom: 0;
-    color: #7bc142; }
+    color: #2b4e69; }
   body.about .leadership h5 {
     font-family: 'Uni-Sans-Light';
     text-transform: uppercase;
@@ -6866,7 +6866,7 @@ body.about .contact-info {
     font-size: .85rem; }
   body.about .contact-info h2.say-hello {
     font-family: 'Uni-Sans-Light';
-    color: #7bc142;
+    color: #2b4e69;
     text-transform: uppercase; }
   body.about .contact-info hr {
     width: 100px;
@@ -6879,7 +6879,7 @@ body.about .contact-info {
     font-size: 1.2rem;
     color: #666; }
   body.about .contact-info i {
-    color: #7bc142;
+    color: #2b4e69;
     margin-right: 5px; }
 
 body.terms-of-use .nav-menu,
@@ -7082,3 +7082,5 @@ body.error-404 #site-footer {
 		}
 	}
 }
+
+

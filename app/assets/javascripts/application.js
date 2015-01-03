@@ -3130,5 +3130,22 @@ $(function(){ $(document).foundation(); });
 
 	$.fn.owlCarousel.Constructor.Plugins.Hash = Hash;
 
+	$('.nav-menu').bind('click', function() {
+		var enabled = $('.hero.nav').hasClass('enabled');
+		if(enabled) {
+			$('.hero.nav').removeClass('enabled');
+			$('.hero.intro').removeClass('masked');
+			$('.hero.about').removeClass('masked');
+			$('.nav-menu').removeClass('enabled');
+			windowScrollTicks = 0;
+		} 
+		else {
+			$('.hero.nav').addClass('enabled');
+			$('.hero.intro').addClass('masked');
+			$('.hero.about').addClass('masked');
+			$('.nav-menu').addClass('enabled');
+		}
+	});
+
 })(window.Zepto || window.jQuery, window, document);
 
