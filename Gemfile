@@ -11,6 +11,8 @@ gem 'devise'
 gem 'foundation-rails'
 gem "font-awesome-rails"
 
+gem 'owlcarousel-rails'
+
 
 
 
