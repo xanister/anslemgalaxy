@@ -56,6 +56,8 @@ GEM
     multi_json (1.10.1)
     mysql (2.9.1)
     orm_adapter (0.5.0)
+    owlcarousel-rails (1.1.3.3)
+      jquery-rails
     rack (1.5.2)
     rack-test (0.6.2)
       rack (>= 1.0)
@@ -110,6 +112,7 @@ DEPENDENCIES
   foundation-rails
   jquery-rails
   mysql
+  owlcarousel-rails
   rails (= 4.1.8)
   sass-rails (~> 4.0.3)
   sqlite3
