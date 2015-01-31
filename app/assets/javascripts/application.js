@@ -3162,7 +3162,7 @@ $(function(){ $(document).foundation(); });
                 }
         });
 
-	$('.signin-menu').bind('click', function() {
+	$('.signin-button').bind('click', function() {
                 var enabled = $('.hero.nav.signin').hasClass('enabled');
                 if(enabled) {
                         $('.hero.nav.signin').removeClass('enabled');
