@@ -3131,21 +3131,50 @@ $(function(){ $(document).foundation(); });
 	$.fn.owlCarousel.Constructor.Plugins.Hash = Hash;
 
 	$('.nav-menu').bind('click', function() {
-		var enabled = $('.hero.nav').hasClass('enabled');
+		var enabled = $('.hero.nav.aboutnav').hasClass('enabled');
 		if(enabled) {
-			$('.hero.nav').removeClass('enabled');
+			$('.hero.nav.aboutnav').removeClass('enabled');
 			$('.hero.intro').removeClass('masked');
 			$('.hero.about').removeClass('masked');
 			$('.nav-menu').removeClass('enabled');
 			windowScrollTicks = 0;
 		} 
 		else {
-			$('.hero.nav').addClass('enabled');
+			$('.hero.nav.aboutnav').addClass('enabled');
 			$('.hero.intro').addClass('masked');
 			$('.hero.about').addClass('masked');
 			$('.nav-menu').addClass('enabled');
+                        $('.hero.nav.signin').removeClass('enabled');
+                        $('.hero.nav.signup').removeClass('enabled');
 		}
 	});
+
+        $('.signup-menu').bind('click', function() {
+                var enabled = $('hero.nav.signup').hasClass('enabled');
+                if(enabled) {
+                        $('.hero.nav.signup').removeClass('enabled');
+                        $('.hero.nav.signin').addClass('enabled');
+                }
+                else {
+                        $('.hero.nav.signup').addClass('enabled');
+                        $('.hero.nav.signin').removeClass('enabled');
+			$('.hero.nav.aboutnav').removeClass('enabled');
+                }
+        });
+
+	$('.signin-menu').bind('click', function() {
+                var enabled = $('.hero.nav.signin').hasClass('enabled');
+                if(enabled) {
+                        $('.hero.nav.signin').removeClass('enabled');
+                        $('.hero.nav.signup').removeClass('enabled');
+                }
+                else {
+                        $('.hero.nav.signin').addClass('enabled');
+                        $('.hero.nav.signup').removeClass('enabled');
+			$('.hero.nav.aboutnav').removeClass('enabled');
+                }
+        });
+
 
 })(window.Zepto || window.jQuery, window, document);
 

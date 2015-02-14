@@ -6318,6 +6318,29 @@ a.circle-link {
   /* As high a padding on the top as the nav is tall. */
   padding-top: 100px; }
 
+.signin-menu {
+  border: 1px solid;
+  margin-top: 29px;
+  text-align: center;
+  padding: 8px;
+  border-radius: 20px;
+  cursor: pointer;
+
+}
+
+.signin-menu:hover {
+  background: #D2D4CD;
+}
+
+.signup-and-in {
+  color:white;
+  font-family: 'Uni-Sans-Light';
+}
+
+.signup-and-in h2 {
+  color:white;
+}
+
 /* Heroes */
 .top-heroes {
   position: relative;

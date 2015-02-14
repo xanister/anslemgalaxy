@@ -1,0 +1,27 @@
+<div class = "hero nav signup signup-and-in">
+  <div class="row">
+    <div class="small-12 medium-12 large-12 columns hero-content">
+	<h2>Sign Up</h2>
+         <%= form_for(:user, :url => {:controller => 'devise/registrations', :action => 'create'}) do |f| %>
+          <div class="email-input"><%= f.email_field :email, :class => "input-block-level email-text-field" ,:autofocus => true, :placeholder => "email address" %></div>
+          <div class="email-input"><%= f.password_field :password, :class => "input-block-level email-text-field" , :placeholder => "password"  %></div>
+          <div class="email-input"><%= f.password_field :password_confirmation, :class => "input-block-level email-text-field" , :placeholder => "password again" %></div>
+          <div class="submit-email"><%= f.submit "Sign up", :class => "btn btn-info signup-button" %></div>
+        <% end %>
+        <div class = "already-signed-up">Already signed up? <a href="#" class = "signin-menu"  >Sign in.</a></div>
+    </div><!-- hero-content -->
+  </div><!-- row -->
+</div><!-- signup nav -->
+<div class = "hero nav signin signup-and-in">
+  <div class="row">
+    <div class="small-12 medium-12 large-12 columns hero-content">
+	<h2>Sign In</h2>
+          <%= form_for(:user, :url => {:controller => 'devise/sessions', :action => 'create'}) do |f| %>
+            <div class="email-input"><%= f.email_field :email, :class => "input-block-level email-text-field" ,:autofocus => true, :placeholder => "email address" %></div>
+            <div class="email-input"><%= f.password_field :password, :class => "input-block-level email-text-field" , :placeholder => "password"  %></div>
+            <div class="submit-email"><%= f.submit "Sign in", :class => "btn btn-info signup-button" %></div>
+          <% end %>
+          <div class = "already-signed-up">Don't have an account yet? <a href="#" class = 'signup-menu'>Sign up.</a></div>
+    </div><!-- hero-content -->
+  </div><!-- row -->
+</div><!-- signup nav -->
