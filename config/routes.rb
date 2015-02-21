@@ -13,6 +13,8 @@ Rails.application.routes.draw do
   get 'privacy' => 'privacy#index', :as => "privacy"
   get 'about' => 'about#index', :as => "about"
 
+  resources :players
+
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 
