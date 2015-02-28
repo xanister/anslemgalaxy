@@ -5,7 +5,7 @@ class PlayersController < ApplicationController
   respond_to :html
 
   def index
-    @players = Player.all
+    @players = current_user.players
     respond_with(@players)
   end
 
@@ -15,6 +15,7 @@ class PlayersController < ApplicationController
 
   def new
     @player = Player.new
+    @player.user = current_user
     respond_with(@player)
   end
 
@@ -23,12 +24,14 @@ class PlayersController < ApplicationController
 
   def create
     @player = Player.new(player_params)
+    @player.user = current_user
     @player.save
     respond_with(@player)
   end
 
   def update
     @player.update(player_params)
+    @player.user = current_user
     respond_with(@player)
   end
 
