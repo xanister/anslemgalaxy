@@ -8,4 +8,8 @@ RSpec.describe User, :type => :model do
     expect(user).to be_valid
   end
 
+  it { should have_many(:players) }
+
+  # TODO add tests for admin when CMS is created
+
 end

@@ -18,6 +18,7 @@ group :test, :development do
   gem 'rspec-rails'
   gem 'factory_girl'
   gem 'factory_girl_rails'
+  gem 'shoulda', '~> 3.5.0'
   gem 'guard'
   gem 'guard-rspec'
   gem 'terminal-notifier-guard'
