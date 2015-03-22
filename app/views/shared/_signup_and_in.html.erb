@@ -2,7 +2,7 @@
   <div class="row">
     <div class="small-12 medium-12 large-12 columns hero-content">
 	<h2>Sign Up</h2>
-         <%= form_for(:user, :url => {:controller => 'devise/registrations', :action => 'create'}) do |f| %>
+         <%= form_for(:user, :url => {:controller => 'registrations', :action => 'create'}) do |f| %>
           <div class="email-input"><%= f.email_field :email, :class => "input-block-level email-text-field" ,:autofocus => true, :placeholder => "email address" %></div>
           <div class="email-input"><%= f.password_field :password, :class => "input-block-level email-text-field" , :placeholder => "password"  %></div>
           <div class="email-input"><%= f.password_field :password_confirmation, :class => "input-block-level email-text-field" , :placeholder => "password again" %></div>
