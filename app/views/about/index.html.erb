@@ -1,84 +1,79 @@
 <div id="site-content">
   <div class="top-heroes">
+    <%= render "shared/hero_navigation" %>
+    <%= render "shared/signup_and_in" %>
     <div class="hero about">
       <div class="gradient-mask"></div>
       <div class="showcase-slider"></div>
       <div class="row">
         <div class="small-12 medium-10 medium-offset-1 large-8 large-offset-2 columns text-center about-intro activated">
-          <p>Anslem is a world of fun and intelligent creativity.  Nick and Justin made it just to have a cool place to hang out.</p>
+          <p>Anslem is a world of fun and intelligent creativity. Nick and Justin made it just to have a cool place to
+            hang out.</p>
         </div>
-      </div><!-- row -->
-    </div><!-- .about-hero -->
-    <div class="hero nav aboutnav">
-      <div class="row">
-        <div class="small-12 medium-12 large-12 columns hero-content">
-          <div class="site-nav">
-            <h3><a href="/">Home</a></h3>
-          </div><!-- .sections -->
-          <div class="contact">
-            <a href="mailto:xanister@hotmail.com">xanister@hotmail.com</a>
-	    <p>910.616.3345</p>
-          </div><!-- .contact -->
-          <div class="social">
-            <a href="https://twitter.com/justinalcon" target="_blank" class="circle-link"><i class="fa fa-twitter"></i></a>
-            <a href="http://justinalcon.tumblr.com/" target="_blank" class="circle-link"><i class="fa fa-tumblr"></i></a>
-            <a href="https://www.linkedin.com/justinalcon" target="_blank" class="circle-link"><i class="fa fa-linkedin"></i></a>
-            <a href="mailto:xanister@hotmail..com" class="circle-link"><i class="fa fa-envelope-o"></i></a>
-          </div><!-- social -->
-        </div>
-      </div><!-- .row -->
-    </div><!-- .hero.nav -->
-  <%= render "shared/signup_and_in" %>
-  </div><!-- .top-heroes -->
-<div class="leadership">
-  <div class="row">
-    <div class="small-12 medium-12 large-12 columns text-center">
-      <h3>Game Makers</h3>
+      </div>
+      <!-- row -->
     </div>
-  </div><!-- .row -->
-  <div class="row">
-    <div class="small-12 medium-6 large-6 columns text-center">
-      <%= image_tag('nick_circle.png') %>
-      <h4>Nick Frees</h4>
-      <h5>Creater and Founder</h5>
-      <div>
-        <a href="https://www.linkedin.com/pub/nicholas-frees/5a/77/23a" target="_blank" class="circle-link"><i class="fa fa-linkedin"></i></a> 
+    <!-- .about-hero -->
+  </div>
+  <!-- .top-heroes -->
+  <div class="leadership">
+    <div class="row">
+      <div class="small-12 medium-12 large-12 columns text-center">
+        <h3>Game Makers</h3>
       </div>
     </div>
-    <div class="small-12 medium-6 large-6 columns text-center">
-      <%= image_tag('justin_circle.png') %>
-      <h4>Justin Alcon</h4>
-      <h5>Founder and Nick's Friend</h5>
-      <div>
-        <a href="Update your public profile settingswww.linkedin.com/in/justinalcon/" target="_blank" class="circle-link"><i class="fa fa-linkedin"></i></a>
+    <!-- .row -->
+    <div class="row">
+      <div class="small-12 medium-6 large-6 columns text-center">
+        <%= image_tag('nick_circle.png') %>
+        <h4>Nick Frees</h4>
+        <h5>Creater and Founder</h5>
+
+        <div>
+          <a href="https://www.linkedin.com/pub/nicholas-frees/5a/77/23a" target="_blank" class="circle-link"><i class="fa fa-linkedin"></i></a>
+        </div>
+      </div>
+      <div class="small-12 medium-6 large-6 columns text-center">
+        <%= image_tag('justin_circle.png') %>
+        <h4>Justin Alcon</h4>
+        <h5>Founder and Nick's Friend</h5>
+
+        <div>
+          <a href="Update your public profile settingswww.linkedin.com/in/justinalcon/" target="_blank" class="circle-link"><i class="fa fa-linkedin"></i></a>
+        </div>
       </div>
     </div>
   </div>
-</div><!-- .leadership -->
-<div class="contact-info">
-  <div class="row">
-    <div class="small-12 medium-12 large-12 columns">
-      <h2 class="say-hello">Drop us a line...</h2>
+  <!-- .leadership -->
+  <div class="contact-info">
+    <div class="row">
+      <div class="small-12 medium-12 large-12 columns">
+        <h2 class="say-hello">Drop us a line...</h2>
+      </div>
     </div>
-  </div>
-  <div class="row">
-    <div class="small-12 medium-4 large-3 columns contact-column">
-      <hr>
+    <div class="row">
+      <div class="small-12 medium-4 large-3 columns contact-column">
+        <hr>
         <p>
-          <strong>Working with/ on Anslem</strong><br />
-          If you are interested in contributing to Anslem or hanging with Nick and Justin please drop us a line at <a href="mailto:xanister@hotmail.com">xanister@hotmail.com</a>.
-          <br />
-          <br />
+          <strong>Working with/ on Anslem</strong><br/>
+          If you are interested in contributing to Anslem or hanging with Nick and Justin please drop us a line at
+          <a href="mailto:xanister@hotmail.com">xanister@hotmail.com</a>.
+          <br/>
+          <br/>
           We look forward to hearing from you!
-       </p>
+        </p>
+      </div>
+      <div class="small-12 medium-4 large-3 columns contact-column">
+        <hr>
+        <p><strong>Queens, NY</strong><br/>
+
+        <p><i class="fa fa-map-marker fa-2x"></i> <a href="https://goo.gl/maps/PNao7" target="_blank">See Location</a>
+        </p>
+      </div>
+      <div class="large-3 columns">
+      </div>
     </div>
-    <div class="small-12 medium-4 large-3 columns contact-column">
-      <hr>
-        <p><strong>Queens, NY</strong><br />
-        <p><i class="fa fa-map-marker fa-2x"></i> <a href="https://goo.gl/maps/PNao7" target="_blank">See Location</a></p>
-    </div>
-    <div class="large-3 columns">
-    </div>
-  </div><!-- .row -->
-</div><!-- .contact -->
+    <!-- .row -->
+  </div>
+  <!-- .contact -->
 </div><!-- closes sirte content -->

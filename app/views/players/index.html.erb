@@ -1,29 +1,22 @@
-<h1>Listing players</h1>
+<div id="site-content">
+  <div class="row">
+    <div class="small-12 medium-12 large-12 columns text-center"><h1>Players</h1></div>
+  </div>
+  <div class="row">
+    <div class="small-12 medium-12 large-12 columns"><%= link_to 'New Player', new_player_path %></div>
+  </div>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Sprite</th>
-      <th>Region server</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+  <% @players.each do |player| %>
+      <div class="row">
+        <div class="small-12 medium-1 large-1 columns"><%= player.name %></div>
+        <div class="small-12 medium-3 large-3 columns"><%= image_tag player.sprite %></div>
+        <div class="small-12 medium-1 large-1 columns"><%= player.race.name %></div>
+        <div class="small-12 medium-2 large-2 columns">Mental: <%= player.mental %></div>
+        <div class="small-12 medium-2 large-2 columns">Physical: <%= player.physical %></div>
+        <div class="small-12 medium-2 large-2 columns">Social: <%= player.social %></div>
+        <div class="small-12 medium-1 large-1 columns"><a href="<%= player.region_server %>">PLAY</a></div>
+      </div>
+  <% end %>
+  <br>
 
-  <tbody>
-    <% @players.each do |player| %>
-      <tr>
-        <td><%= player.name %></td>
-        <td><%= player.sprite %></td>
-        <td><%= player.region_server %></td>
-        <td><%= link_to 'Show', player %></td>
-        <td><%= link_to 'Edit', edit_player_path(player) %></td>
-        <td><%= link_to 'Destroy', player, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Player', new_player_path %>
+</div><!-- site-content -->

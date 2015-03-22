@@ -13,4 +13,6 @@ RSpec.describe Player, :type => :model do
   it { should belong_to(:profession) }
   it { should have_many(:item)}
 
+  #TODO assert that traits can't add up to more than max
+
 end

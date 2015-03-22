@@ -1,5 +1,15 @@
-<h1>New player</h1>
+<div id="site-content">
+  <div class="row">
+    <div class="small-12 medium-12 large-12 columns text-center"><h1>New Player</h1></div>
+  </div>
+  <%= render 'traits' %>
+  <%= render 'race_profession' %>
+  <%= render 'name' %>
+  <%= render 'form' %>
+  <div class="row">
+    <div id="player-list-link" class="small-12 medium-12 large-12 columns">
+      <%= link_to 'Cancel', players_path %>
+    </div>
+  </div>
+</div>
 
-<%= render 'form' %>
-
-<%= link_to 'Back', players_path %>
