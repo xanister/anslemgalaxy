@@ -10,7 +10,7 @@ class PlayersController < ApplicationController
   end
 
   def show
-    respond_with(@player)
+    redirect_to players_path
   end
 
   def new
@@ -26,7 +26,7 @@ class PlayersController < ApplicationController
     @player = Player.new(player_params)
     @player.user = current_user
     @player.save
-    respond_with(@player)
+    redirect_to players_path
   end
 
   def update
@@ -46,6 +46,6 @@ class PlayersController < ApplicationController
     end
 
     def player_params
-      params.require(:player).permit(:name, :sprite, :region_server, :mental, :physical, :social)
+      params.require(:player).permit(:name, :sprite, :region_server, :mental, :physical, :social, :race_id, :profession_id)
     end
 end

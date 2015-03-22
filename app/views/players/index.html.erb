@@ -1,27 +1,20 @@
 <div id="site-content">
   <div class="row">
-    <div class="small-12 medium-12 large-12 columns text-center"><%= link_to 'New Player', new_player_path %></div>
-  </div>
-  <div class="row">
     <div class="small-12 medium-12 large-12 columns text-center"><h1>Players</h1></div>
   </div>
-
   <div class="row">
-    <div class="small-12 medium-2 large-2 columns">Name</div>
-    <div class="small-12 medium-2 large-2 columns">Sprite</div>
-    <div class="small-12 medium-2 large-2 columns">Race</div>
-    <div class="small-12 medium-2 large-2 columns">Mental</div>
-    <div class="small-12 medium-2 large-2 columns">Physical</div>
-    <div class="small-12 medium-2 large-2 columns">Social</div>
+    <div class="small-12 medium-12 large-12 columns"><%= link_to 'New Player', new_player_path %></div>
   </div>
+
   <% @players.each do |player| %>
       <div class="row">
-        <div class="small-12 medium-2 large-2 columns"><%= player.name %></div>
-        <div class="small-12 medium-2 large-2 columns"><%= image_tag player.sprite %></div>
-        <div class="small-12 medium-2 large-2 columns"><%= player.race.name %></div>
-        <div class="small-12 medium-2 large-2 columns"><%= player.mental %></div>
-        <div class="small-12 medium-2 large-2 columns"><%= player.physical %></div>
-        <div class="small-12 medium-2 large-2 columns"><%= player.social %></div>
+        <div class="small-12 medium-1 large-1 columns"><%= player.name %></div>
+        <div class="small-12 medium-3 large-3 columns"><%= image_tag player.sprite %></div>
+        <div class="small-12 medium-1 large-1 columns"><%= player.race.name %></div>
+        <div class="small-12 medium-2 large-2 columns">Mental: <%= player.mental %></div>
+        <div class="small-12 medium-2 large-2 columns">Physical: <%= player.physical %></div>
+        <div class="small-12 medium-2 large-2 columns">Social: <%= player.social %></div>
+        <div class="small-12 medium-1 large-1 columns"><a href="<%= player.region_server %>">PLAY</a></div>
       </div>
   <% end %>
   <br>

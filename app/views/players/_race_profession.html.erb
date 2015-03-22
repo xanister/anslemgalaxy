@@ -1,0 +1,26 @@
+<div class="hidden" id="race">
+<div class="row">
+  <div class="small-12 medium-6 large-6 columns text-center">Race</div>
+  <div class="small-12 medium-6 large-6 columns text-center">
+    <select name="race-select" id="race-select">
+      <option value="" selected="selected">None</option>
+      <% Race.all.each do |race| %>
+          <option value="<%= race.id %>"><%= race.name %></option>
+      <% end %>
+    </select>
+  </div>
+  <div class="small-12 medium-6 large-6 columns text-center">Profession</div>
+  <div class="small-12 medium-6 large-6 columns text-center">
+    <select name="profession-select" id="profession-select">
+      <option value="" selected="selected">None</option>
+      <% Profession.all.each do |prof| %>
+          <option value="<%= prof.id %>"><%= prof.name %></option>
+      <% end %>
+    </select>
+  </div>
+</div>
+<div class="row">
+  <div class="small-12 medium-6 large-6 columns text-center" id="race-next">NEXT</div>
+  <div class="small-12 medium-6 large-6 columns text-center" id="race-back">BACK</div>
+</div>
+</div>
