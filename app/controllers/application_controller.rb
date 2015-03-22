@@ -4,6 +4,11 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   def after_sign_in_path_for(resource)
-    '/players'
+    #TODO unit test this bahvior when rspec is merged in
+    if current_user.players.blank?
+      '/players/new'
+    else
+      '/players'
+    end
   end
 end

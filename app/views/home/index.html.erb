@@ -1,97 +1,102 @@
 <div id="site-content">
-	<div class="top-heroes">
-		<div class="hero nav aboutnav">
-			<div class="row">
-				<div class="small-12 medium-12 large-12 columns hero-content">
-					<div class="site-nav">
-						<h3><a href="/about">About Us</a></h3>
-					</div><!-- .sections -->
-					<div class="contact">
-						<a href="mailto:xanister@hotmail.com">xanister@hotmail.com</a>
-						<p>910.616.3345</p>
-					</div><!-- .contact -->
-					<div class="social">
-						<a href="https://twitter.com/justinalcon" target="_blank" class="circle-link"><i class="fa fa-twitter"></i></a>
-						<a href="https://www.facebook.com/justinalcon" target="_blank" class="circle-link"><i class="fa fa-facebook"></i></a>
-						<a href="http://justinalcon.tumblr.com/" target="_blank" class="circle-link"><i class="fa fa-tumblr"></i></a>
-						<a href="www.linkedin.com/in/justinalcon/" target="_blank" class="circle-link"><i class="fa fa-linkedin"></i></a>
-						<a href="mailto:xanister@hotmail.com" class="circle-link"><i class="fa fa-envelope-o"></i></a>
-					</div><!-- social --> 
-				</div><!-- hero-content -->
-			</div><!-- row -->
-		</div><!-- hero nav -->
-		<%= render "shared/signup_and_in" %>
-		<div class="hero intro">
-			<div class="hero-video">
-				<div class="video-intro">
-					<div class="row">
-						<div class="columns small-12 medium-10 medium-offset-1 large-8 large-offset-2 text-center">
-							<div class="hero-content">
-								<h2>Anslem Galaxy</h2>
-								<hr>
-								<h4>An Intellegent Persistant World of Awesome Fun</h4>
-							</div><!-- hero content -->
-						</div><!-- text center -->
-					</div><!-- row -->
-				</div><!-- video intro -->
-				<video id="hero-video-player" autoplay loop muted="true" preload="auto">
-					<source src= "assets/anslem_ambient.mp4" type="video/mp4">
-					<source src= "assets/anslem_ambient.ogv" type="video/ogv">
-					<source src= "assets/anslem_ambient.webm" type="video/webm">
-					Your browser does not support the video tag.
-				</video>
-			</div><!-- .header-video -->	
-		</div><!-- .hero.intro -->
-	</div><!-- top-heroes -->
-	 <div class="props">
-                        <div class="row">
-                                <div class="small-12 medium-4 large-4 columns text-center">
-                                        <img src="assets/icon_intelligent.png">
-                                        <h4>Intelligent</h4>
-                                        <p>A living world that learns and changes</p>
-                                </div>
-                                <div class="small-12 medium-4 large-4 columns text-center">
-                                        <img src="assets/icon_persistant.png">
-                                        <h4>Persistant</h4>
-                                        <p>Anslem is always changing, and your actions have real consequennce</p>
-                                </div>
-                                <div class="small-12 medium-4 large-4 columns end text-center">
-                                        <img src="assets/icon_fun.jpeg">
-                                        <h4>Fun</h4>
-                                        <p>Whether your into, fishing, socializing, or fighting monsters on a crazy quest, we've got you covered</p>
-                                </div>
-                  </div><!-- .row -->
-         </div><!-- .props -->
-	<div class="owl-gallery showcase">
-	<div class="owl-slides">
-		<div class="showcase-slide" id="ss-1">
-			<div class="background-mask"></div>
-			<div class="row">
-			<div class="small-10 small-offset-1 medium-10 medium-offset-1 large-10 large-offset-1 columns"><div class="reel-container"></div></div>
-				<div class="small-11 medium-5 medium-offset-7 large-4 large-offset-8 columns slide-detail-copy">
-					<div class="slide-detail-title-container">
-						<img class="slide-detail-title-image" src="/assets/carousel_ss_1.png">
-					</div>
-					<p>A dynamic engaging world</p>
-				</div><!-- .slide-detail-copy -->
-			</div><!-- .row -->
-		</div><!-- .showcase-slide#ss-one -->
-		<div class="showcase-slide" id="ss-2">
-			<div class="background-mask"></div>
-			<div class="row">
-			<div class="small-10 small-offset-1 medium-10 medium-offset-1 large-10 large-offset-1 columns"><div class="reel-container"></div></div>
-				<div class="small-11 medium-5 medium-offset-7 large-4 large-offset-8 columns slide-detail-copy">
-					<div class="slide-detail-title-container">
-						<img class="slide-detail-title-image" src="/assets/carousel_ss_2.png">
-					</div>
-					<p>A fun place to play</p>
-				</div><!-- .slide-detail-copy -->
-			</div><!-- .row -->
-		</div><!-- .showcase-slide#ss-two -->
-	</div><!-- owl-slides -->
-	<div class="owl-carousel">
-		<div class="slide-title"><img src="assets/icon_ss_1.png"></div>
-		<div class="slide-title"><img src="assets/icon_ss_2.png"></div>
-	</div>
-</div> <!-- owl-gallery showcase -->
+  <div class="top-heroes">
+    <%= render "shared/hero_navigation" %>
+    <%= render "shared/signup_and_in" %>
+    <div class="hero intro">
+      <div class="hero-video">
+        <div class="video-intro">
+          <div class="row">
+            <div class="columns small-12 medium-10 medium-offset-1 large-8 large-offset-2 text-center">
+              <div class="hero-content">
+                <h2>Anslem Galaxy</h2>
+                <hr>
+                <h4>An Intellegent Persistant World of Awesome Fun</h4>
+              </div>
+              <!-- hero content -->
+            </div>
+            <!-- text center -->
+          </div>
+          <!-- row -->
+        </div>
+        <!-- video intro -->
+        <video id="hero-video-player" autoplay loop muted="true" preload="auto">
+          <source src="assets/anslem_ambient.mp4" type="video/mp4">
+          <source src="assets/anslem_ambient.ogv" type="video/ogv">
+          <source src="assets/anslem_ambient.webm" type="video/webm">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <!-- .header-video -->
+    </div>
+    <!-- .hero.intro -->
+  </div>
+  <!-- top-heroes -->
+  <div class="props">
+    <div class="row">
+      <div class="small-12 medium-4 large-4 columns text-center">
+        <img src="assets/icon_intelligent.png">
+        <h4>Intelligent</h4>
+
+        <p>A living world that learns and changes</p>
+      </div>
+      <div class="small-12 medium-4 large-4 columns text-center">
+        <img src="assets/icon_persistant.png">
+        <h4>Persistant</h4>
+
+        <p>Anslem is always changing, and your actions have real consequennce</p>
+      </div>
+      <div class="small-12 medium-4 large-4 columns end text-center">
+        <img src="assets/icon_fun.jpeg">
+        <h4>Fun</h4>
+
+        <p>Whether your into, fishing, socializing, or fighting monsters on a crazy quest, we've got you covered</p>
+      </div>
+    </div>
+    <!-- .row -->
+  </div>
+  <!-- .props -->
+  <div class="owl-gallery showcase">
+    <div class="owl-slides">
+      <div class="showcase-slide" id="ss-1">
+        <div class="background-mask"></div>
+        <div class="row">
+          <div class="small-10 small-offset-1 medium-10 medium-offset-1 large-10 large-offset-1 columns">
+            <div class="reel-container"></div>
+          </div>
+          <div class="small-11 medium-5 medium-offset-7 large-4 large-offset-8 columns slide-detail-copy">
+            <div class="slide-detail-title-container">
+              <img class="slide-detail-title-image" src="/assets/carousel_ss_1.png">
+            </div>
+            <p>A dynamic engaging world</p>
+          </div>
+          <!-- .slide-detail-copy -->
+        </div>
+        <!-- .row -->
+      </div>
+      <!-- .showcase-slide#ss-one -->
+      <div class="showcase-slide" id="ss-2">
+        <div class="background-mask"></div>
+        <div class="row">
+          <div class="small-10 small-offset-1 medium-10 medium-offset-1 large-10 large-offset-1 columns">
+            <div class="reel-container"></div>
+          </div>
+          <div class="small-11 medium-5 medium-offset-7 large-4 large-offset-8 columns slide-detail-copy">
+            <div class="slide-detail-title-container">
+              <img class="slide-detail-title-image" src="/assets/carousel_ss_2.png">
+            </div>
+            <p>A fun place to play</p>
+          </div>
+          <!-- .slide-detail-copy -->
+        </div>
+        <!-- .row -->
+      </div>
+      <!-- .showcase-slide#ss-two -->
+    </div>
+    <!-- owl-slides -->
+    <div class="owl-carousel">
+      <div class="slide-title"><img src="assets/icon_ss_1.png"></div>
+      <div class="slide-title"><img src="assets/icon_ss_2.png"></div>
+    </div>
+  </div>
+  <!-- owl-gallery showcase -->
 </div><!-- site-content -->
