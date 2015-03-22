@@ -46,6 +46,6 @@ class PlayersController < ApplicationController
     end
 
     def player_params
-      params.require(:player).permit(:name, :sprite, :region_server)
+      params.require(:player).permit(:name, :sprite, :region_server, :mental, :physical, :social)
     end
 end

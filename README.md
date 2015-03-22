@@ -12,54 +12,42 @@ This site allows anslem players to create, choose and modify players.
  
 
 
-#Developing on ubuntu 14.4
+#Developing on ubuntu 14.04
 
 ________
 
 ###First Steps
 
-Starting development on Anslem Galaxy does require a bit of forethought and preparation.  Firstly, you will need a designated development "box" or computer with a designated workspace. You will need to get a computer ("dev box") running on the ubuntu operating system. 
+Get access to a modern machine running Ubuntu 14.04.
 
-Once you have your ubuntu dev box situated, you will have a few tool dependencies, listed below.
+##*Tool Dependencies*:
 
-##*Tool Dependencies*: 
->
 1.  Git
 2.  Rvm
-3.  Ruby
-4.  Rails
+3.  Ruby 2.2.0
+4.  Rails 4.1.8
 5.  Mysql
 
-We will be downloading, installing, and optimizing each tool one after the other in sequence.  A brief description of each tool and why we need to use it will be provided along the way.  
 
 ###  Git
 
-Git is, according to wikipedia.org, "a distributed revision control system with an emphasis on speed, data integrity, and support for distributed, non-linear workflows." 
-
-What this basically means in laymen's terms is git makes sure every developer on a project is working on the same playing field.  Using your favorite search engine to look up "intalling git on umbuntu" can give you more color on this.
-
-From your ubuntu command line enter the two following strings, hitting the enter key after each (obviously).  
+We use git and github to collaborate.
  
 >* sudo apt-get update 
 >* sudo apt-get install git
-
-After this install, check your git version (indeed, after downloading and installing each tool/module it is a good idea to check that tool's version.
 
 >* git --version
 
 Your git version should be 1.9.1
 
-*Note that at this time it is suggested you open a github account*
-
 ###  RVM
 
-RVM, according to Wikipedia.org, is a unix-like software platform designed to manage multiple installations of Ruby on the same device.
+We use RVM to manage our ruby versions, use your own tool at your own risk, but make sure to get the right ruby (2.2.0).
 
 You will want to install this using the following ubuntu command:
 
 >*  \curl -sSL https://get.rvm.io | sudo bash -s stable
 
-Once again we want to check our version:
 
 >* rvm --version
 
@@ -67,84 +55,73 @@ At the time of this readme file's composition, the desired version of rvm is 1.2
 
 ###Ruby
 
-Ruby is where all the magic really happens.  According to Wikipedia, Ruby is a dynamic, reflective, object-oriented, general-purpose programming language.  Any "real" development work you will be doing requires Ruby.  
-
-In your command line:
+Ruby is the principal language of this project.
 
 >* rvm install 2.2.0
 
-Remember how we just installed Ruby Version Manager?  This was in anticipation of installing not just Ruby but a specifically designated version of Ruby.  In this case, 2.2.0.  
+If this box is dedicated to Nystra development:
+
+>* rvm global 2.2.0
+
+else we'll set it locally after [getting the code](#getTheCode)
+
 
 ###Node
 
-Here's where things get interesting.  First, you will have to get nodes.  In your command line enter:
+Node is our javascript runtime environment
 
-> * sudo add-apt-repository ppa:chris-lea/node.js
 >* sudo apt-get update
 >* sudo apt-get install nodejs
 
 
-###Rails (or *"Ruby on Rails"*)
+###Rails
 
 Rails is a framework that composes Ruby and makes websites easy.  Better put, Wikipedia describes Rails as "an open source web application framework written in Ruby. Rails is a full-stack framework that emphasizes the use of well-known software engineering patterns and paradigms, including convention over configuration (CoC), don't repeat yourself (DRY), the active record pattern, and model–view–controller (MVC)."
 
-Subsequently, you can install Rails:
-
 >* gem install rails
-
-Once again, check your version:
 
 >* rails --version
 
-At the time of this readme file's composition, the desired version of rails is 4.1.8.
+The desired version of rails is 4.1.8.
 
 ###Mysql
 
-The final tool, before getting off the ground on developing this project, is Mysql.  Wikipedia describes Mysql as "the world's second most widely used relational database management system (RDBMS)and most widely used open-source RDBMS"
+mysql is a database application, it's not required for development but recommended. SQLite can also be used.
 
 >* sudo apt-get install mysql-server
-<blank password is fine>
 
-Go back to github account.  Cut and paste your https clone code
+##<a name="getTheCode">Getting the Code</a>
 
-In mysql cut and paste within YOUR anslem the clone code.  Git clone <paste> <enter>
-
-
-
-
-##Getting the Code
-
-
-1. Get a github account
+1. Get a github account by signing up at github.com
 2. Fork Xanister/AnslemGalaxy to your github account
-3. Clone your forked repo 
+3. Clone your forked repo
 
- * git clone <user name>/AnslemGalaxy
+  >* git clone <user name>/AnslemGalaxy
 
+4. Add a remote upstream:
 
-4. Add a remote upstream: 
+  >* git remote add anslemUpstream git@github.com:xanister/anslemgalaxy.git
 
-
- * git remote add AnslemUpstream git@github.com:xanister/anslemgalaxy.git
-
-
-5. Bundle Install-
+5. Install Gem dependencies
  
-  * Do a bundle install (bundle install or whatever ubuntu tells you to do)
-
-  * ubuntu@ip-172-31-5-177:/var/www/anslemgalaxy$ rake db:create
-
-  * ubuntu@ip-172-31-5-177:/var/www/anslemgalaxy$ rake db:migrate rails s
-
-
-If doesn’t work: use this string
-
->* sudo apt-get install libmysqlclient-dev libmysqlclient18 ruby-dev
-
+  >* bundle install
 
 ##Starting the App in Development
 
-First command: 
+1. create the databases
 
->rails s
- 
+  >* rake db:create
+
+  >* rake db:seed
+
+  >* rake db:migrate
+
+2. start the server on port 3000
+
+  >* rails s
+
+3. in a separate terminal window:
+
+  >* guard
+
+You now have a server running at YOUR_IP:3000 and continuous test watching through guard.  You are ready to [develop a feature](https://docs.google.com/document/d/1AIorlCRpa9YKdl7Kz9PwwO2TV4koiK9iixCoQIcFx4M/edit)
