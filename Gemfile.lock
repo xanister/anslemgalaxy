@@ -89,7 +89,7 @@ GEM
     mime-types (2.4.3)
     minitest (5.4.3)
     multi_json (1.10.1)
-    mysql (2.9.1)
+    mysql2 (0.3.18)
     nenv (0.2.0)
     notiffany (0.0.6)
       nenv (~> 0.1)
@@ -194,7 +194,7 @@ DEPENDENCIES
   guard-rspec
   guard-shell
   jquery-rails
-  mysql
+  mysql2
   owlcarousel-rails
   rails (= 4.1.8)
   rspec-rails
