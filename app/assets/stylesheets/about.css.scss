@@ -1,0 +1,69 @@
+
+body.about .leadership {
+  padding: 40px 0;
+}
+
+body.about .leadership h3 {
+  font-family: 'Uni-Sans-Light';
+  font-size: 2.6rem;
+  text-transform: uppercase;
+}
+
+body.about .leadership h4 {
+  text-transform: uppercase;
+  font-size: 1.9rem;
+  line-height: 1.9rem;
+  margin-bottom: 0;
+  color: #2b4e69;
+}
+
+body.about .leadership h5 {
+  font-family: 'Uni-Sans-Light';
+  text-transform: uppercase;
+  font-style: italic;
+  font-size: 1.6rem;
+  color: #ccc;
+}
+
+body.about .contact-info {
+  padding-top: 80px;
+  color: #acaaaa;
+  background-color: #eaeaea;
+}
+
+@media only screen and (min-width: 64.063em) {
+  body.about .contact-info {
+    background: #eaeaea url("/assets/queens_map.png") no-repeat bottom right;
+  }
+}
+
+body.about .contact-info .contact-column p {
+  font-size: .85rem;
+}
+
+body.about .contact-info h2.say-hello {
+  font-family: 'Uni-Sans-Light';
+  color: #2b4e69;
+  text-transform: uppercase;
+}
+
+body.about .contact-info hr {
+  width: 100px;
+  background: #000;
+  height: 1px;
+}
+
+body.about .contact-info a {
+  color: #acaaaa;
+  text-decoration: underline;
+}
+
+body.about .contact-info strong {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+body.about .contact-info i {
+  color: #2b4e69;
+  margin-right: 5px;
+}
