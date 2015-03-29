@@ -1,6 +1,6 @@
 class PlayersController < ApplicationController
   before_filter :authenticate_user!
-  before_action :set_player, only: [:show, :edit, :update, :destroy]
+  before_action :set_player, only: [:show, :update, :destroy]
 
   respond_to :html
 
@@ -9,17 +9,10 @@ class PlayersController < ApplicationController
     respond_with(@players)
   end
 
-  def show
-    redirect_to players_path
-  end
-
   def new
     @player = Player.new
     @player.user = current_user
     respond_with(@player)
-  end
-
-  def edit
   end
 
   def create
