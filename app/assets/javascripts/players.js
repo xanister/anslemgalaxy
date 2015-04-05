@@ -48,4 +48,26 @@ Nystra.initialize_player_form = function(){
         $("#race").show();
         $("#name").hide();
     });
+
+    $('.trait-slider').bind('change', function () {
+       Nystra.set_player_points();
+    });
+}
+
+Nystra.set_player_points = function(){
+    var MAX_PLAYER_POINTS = 225;
+    var mental = parseInt($("#mental").val());
+    var physical = parseInt($("#physical").val());
+    var social = parseInt($("#social").val());
+    var used_points = mental + physical + social
+    var current_points = MAX_PLAYER_POINTS - used_points;
+    $("#player_points").html(current_points);
+    if (current_points < 0){
+        $(".submit-button").hide();
+        $("#player_points").css("color","red");
+    }
+    else{
+        $(".submit-button").show();
+        $("#player_points").css("color","#ced0c6");
+    }
 }

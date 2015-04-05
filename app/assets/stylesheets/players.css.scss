@@ -1,3 +1,28 @@
 // Place all the styles related to the Players controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+$dragon_gray: #3d2f1e;
+$blue_dress: #2b4e69;
+$blonde: #ced0c6;
+$stone: #b38460;
+
+.player-form{
+  background: $dragon_gray;
+  color: $blonde;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  font-size: 28px;
+
+  .form-title{
+   font-size: 32px;
+    padding-bottom: 50px;
+  }
+
+  .submit-button{
+    background: $blue_dress;
+    color: $blonde;
+    float: right;
+    border-radius: 15px;
+  }
+}

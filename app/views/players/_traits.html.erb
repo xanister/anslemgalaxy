@@ -1,14 +1,17 @@
-<div id="traits">
+<div id="traits" class="player-form">
   <div class="row">
-    <div class="small-12 medium-6 large-6 columns text-center">Mental</div>
-    <div class="small-12 medium-6 large-6 columns text-center"><input id="mental" type="number" max="75" min="0"></div>
-    <div class="small-12 medium-6 large-6 columns text-center">Physical</div>
-    <div class="small-12 medium-6 large-6 columns text-center"><input id="physical" type="number" max="75" min="0">
-    </div>
-    <div class="small-12 medium-6 large-6 columns text-center">Social</div>
-    <div class="small-12 medium-6 large-6 columns text-center"><input id="social" type="number" max="75" min="0"></div>
+    <div class="small-12 medium-6 large-6 columns text-center">Player Points</div>
+    <div id="player_points" class="small-12 medium-6 large-6 columns text-center">225</div>
   </div>
   <div class="row">
-    <div class="small-12 medium-6 large-6 columns text-center" id="traits-next">NEXT</div>
+    <div class="small-12 medium-6 large-6 columns text-center">Mental</div>
+    <div class="small-12 medium-6 large-6 columns text-center"><input id="mental" class ="trait-slider" type="range" max="225" min="0" value="0"></div>
+    <div class="small-12 medium-6 large-6 columns text-center">Physical</div>
+    <div class="small-12 medium-6 large-6 columns text-center"><input id="physical" class ="trait-slider" type="range" max="225" min="0" value="0"></div>
+    <div class="small-12 medium-6 large-6 columns text-center">Social</div>
+    <div class="small-12 medium-6 large-6 columns text-center"><input id="social" class ="trait-slider" type="range" max="225" min="0" value="0"></div>
+  </div>
+  <div class="row">
+    <div class="submit-button small-6 medium-3 large-2 columns text-center" id="traits-next">NEXT</div>
   </div>
 </div>

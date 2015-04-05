@@ -1,15 +1,17 @@
 <div id="site-content">
+  <div class="player-form"
   <div class="row">
-    <div class="small-12 medium-12 large-12 columns text-center"><h1>New Player</h1></div>
+    <div class="small-12 medium-12 large-12 columns text-center form-title">New Player</div>
   </div>
   <%= render 'traits' %>
   <%= render 'race_profession' %>
   <%= render 'name' %>
   <%= render 'form' %>
   <div class="row">
-    <div id="player-list-link" class="small-12 medium-12 large-12 columns">
+    <div id="player-list-link" class="small-12 medium-6 large-2 columns">
       <%= link_to 'Cancel', players_path %>
     </div>
+  </div>
   </div>
 </div>
 
