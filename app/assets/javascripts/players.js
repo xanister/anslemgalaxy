@@ -52,6 +52,23 @@ Nystra.initialize_player_form = function(){
     $('.trait-slider').bind('change', function () {
        Nystra.set_player_points();
     });
+
+    $('.select').bind('change', function () {
+       Nystra.toggle_race_next_button();
+    });
+
+    $('#name-input').bind('keyup', function (){
+       Nystra.toggle_player_create_button();
+    });
+}
+
+Nystra.toggle_player_create_button = function (){
+    if($("#name-input").val() === ""){
+        $("#create-player").hide();
+    }
+    else{
+        $("#create-player").show();
+    }
 }
 
 Nystra.set_player_points = function(){
@@ -69,5 +86,14 @@ Nystra.set_player_points = function(){
     else{
         $(".submit-button").show();
         $("#player_points").css("color","#ced0c6");
+    }
+}
+
+Nystra.toggle_race_next_button = function(){
+    if ($('#race-select').val() === "" || $("#profession-select").val() === ""){
+        $("#race-next").hide();
+    }
+    else{
+        $("#race-next").show();
     }
 }
