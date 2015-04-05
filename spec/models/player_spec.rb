@@ -13,6 +13,12 @@ RSpec.describe Player, :type => :model do
   it { should belong_to(:profession) }
   it { should have_many(:item)}
 
-  #TODO assert that traits can't add up to more than max
+  context 'it has too many base points' do
+    let(:mr_beefy) { FactoryGirl.build_stubbed(:player, :mr_beefy) }
+
+    it 'should not be valid' do
+      expect(mr_beefy).to_not be_valid
+    end
+  end
 
 end
