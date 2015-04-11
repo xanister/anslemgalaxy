@@ -1,5 +1,13 @@
 <div id="site-content">
-<% @faqs.each do |faq| %>
-  <%= faq.inspect %>
-<% end %>
+  <% @faqs.each do |faq| %>
+    <div class="row faq-instance">
+      <div class="columns small-12 medium-12 large-12 question">
+        <%= faq.question %>
+      </div>
+
+       <div class="columns small-12 medium-12 large-12 answer">
+         <%= faq.answer %>
+      </div>
+    </div>
+  <% end %>
 </div>
