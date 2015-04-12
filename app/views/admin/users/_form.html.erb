@@ -1,0 +1,9 @@
+<div id="site-content">
+  <div class="row">
+    <%= form_for [:admin, @user] do |f| %>
+        <div class="small-12 medium-6 large-6 columns"><%= f.text_field :email %></div>
+        <div class="small-12 medium-3 large-3 columns">Is admin: <%= f.check_box :admin %></div>
+        <div class="small-12 medium-3 large-3 columns"><%= f.submit %></div>
+    <% end %>
+  </div>
+</div>

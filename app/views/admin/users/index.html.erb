@@ -1,0 +1,10 @@
+<div id="site-content">
+  <% @users.each do |user| %>
+      <div class="row">
+        <div class="columns small-6 medium-6 large-6"><%= link_to user.email, edit_admin_user_path(user) %> <%= if user.admin? then
+                                                                                                                  "(Admin)"
+                                                                                                                end %></div>
+        <div class="columns small-6 medium-6 large-6"><%= link_to user.email, "mailto:" + user.email %></div>
+      </div>
+  <% end %>
+</div>

@@ -9,4 +9,10 @@ Rails.application.routes.draw do
   resources :about, only: [:index]
 
   resources :players, except: [:edit]
+
+  namespace :admin do
+    root :to => "players#index"
+    resources :players
+    resources :users
+  end
 end

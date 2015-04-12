@@ -1,0 +1,32 @@
+<div id="site-content">
+  <div class="row">
+    <%= form_for [:admin, @player] do |f| %>
+        <div id="submit-div" class="small-12 medium-3 large-3 columns">Name</div>
+        <div id="submit-div" class="small-12 medium-3 large-3 columns"><%= f.text_field :name %></div>
+
+        <div id="submit-div" class="small-12 medium-3 large-3 columns">Sprite Location</div>
+        <div id="submit-div" class="small-12 medium-3 large-3 columns"><%= f.text_field :sprite %></div>
+
+        <div id="submit-div" class="small-12 medium-3 large-3 columns">Region Server</div>
+        <div id="submit-div" class="small-12 medium-3 large-3 columns"><%= f.text_field :region_server %></div>
+
+        <div id="submit-div" class="small-12 medium-3 large-3 columns">Mental</div>
+        <div id="submit-div" class="small-12 medium-3 large-3 columns"><%= f.number_field :mental %></div>
+
+        <div id="submit-div" class="small-12 medium-3 large-3 columns">Physical</div>
+        <div id="submit-div" class="small-12 medium-3 large-3 columns"><%= f.number_field :physical %></div>
+
+        <div id="submit-div" class="small-12 medium-3 large-3 columns">Social</div>
+        <div id="submit-div" class="small-12 medium-3 large-3 columns"><%= f.number_field :social %></div>
+
+        <div id="submit-div" class="small-12 medium-3 large-3 columns">Race</div>
+        <div id="submit-div" class="small-12 medium-3 large-3 columns"><%= f.collection_select :race_id, Race.order(:name),:id,:name, include_blank: true %></div>
+
+        <div id="submit-div" class="small-12 medium-3 large-3 columns">Profession</div>
+        <div id="submit-div" class="small-12 medium-3 large-3 columns"><%= f.collection_select :profession_id, Profession.order(:name),:id,:name, include_blank: true %></div>
+
+        <div id="submit-div" class="small-12 medium-3 large-3 columns"><%= f.submit %></div>
+
+    <% end %>
+  </div>
+</div>
