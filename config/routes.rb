@@ -7,7 +7,6 @@ Rails.application.routes.draw do
   resources :terms, only: [:index]
   resources :privacy, only: [:index]
   resources :about, only: [:index]
-
   resources :players, except: [:edit]
 
   namespace :admin do
@@ -15,4 +14,7 @@ Rails.application.routes.draw do
     resources :players
     resources :users
   end
+
+  resources :faq, only: [:index]
+
 end
