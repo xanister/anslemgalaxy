@@ -1,8 +1,10 @@
 <div id="site-content">
   <% @faqs.each do |faq| %>
     <div class="row faq-instance">
-      <div class="columns small-12 medium-12 large-12 question">
-        <%= faq.question %>
+      <div class="columns small-12 medium-12 large-12">
+        <div class="columns small-12 medium-6 large-4 question">
+          <%= faq.question %>
+        </div>
       </div>
 
        <div class="columns small-12 medium-12 large-12 answer">
