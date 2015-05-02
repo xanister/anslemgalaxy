@@ -1,12 +1,15 @@
 <% if current_user.try(:admin?) && (admin_namespace?) %>
-    <div class="row"">
-    <div class="columns small-6 medium-6 large-6 <%= if (admin_namespace?) && controller.controller_name == "players" then
-                                                       "active"
-                                                     end %>">
-      <%= link_to 'Players', admin_players_path %> &bull; </div>
-    <div class="columns small-6 medium-6 large-6 <%= if (admin_namespace?) && controller.controller_name == "players" then
-                                                       "active"
-                                                     end %>"><%= link_to 'Users', admin_users_path %> &bull; </div>
+    <div class="row">
+      <div class="columns small-3 medium-3 large-3 text-center<%= if (admin_namespace?) && controller.controller_name == "players" then "active" end %>">
+        <%= link_to 'Players', admin_players_path %>
+      </div>
+      <div class="columns small-3 medium-3 large-3 text-center<%= if (admin_namespace?) && controller.controller_name == "players" then "active" end %>">
+        <%= link_to 'Users', admin_users_path %>
+      </div>
+      <div class="columns small-3 medium-3 large-3 text-center<%= if (admin_namespace?) && controller.controller_name == "faqs" then "active" end %>">
+        <%= link_to 'FAQ', admin_faqs_path %>
+      </div>
+
     </div>
 
 <% end %>

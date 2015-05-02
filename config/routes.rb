@@ -13,6 +13,7 @@ Rails.application.routes.draw do
     root :to => "players#index"
     resources :players
     resources :users
+    resources :faqs
   end
 
   resources :faq, only: [:index]
