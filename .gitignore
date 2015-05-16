@@ -21,3 +21,6 @@
 # Ignore IDE related files
 nbproject
 .idea/*
+
+# Ignore database.yml
+/config/database.yml
