@@ -1,0 +1,12 @@
+<div id="site-content">
+  <div class="row">
+    <%= form_for [:admin, @faq] do |f| %>
+        <div class="small-12 medium-6 large-6 columns">Question: <%= f.text_field :question %></div>
+        <div class="small-12 medium-6 large-6 columns">Answer: <%= f.text_field :answer %></div>
+        <div class="small-12 medium-6 large-6 columns">Image: <%= f.text_field :image %></div>
+        <div class="small-12 medium-6 large-6 columns">Video: <%= f.text_field :video %></div>
+        <div class="small-12 medium-3 large-3 columns">Is visible?: <%= f.check_box :visible %></div>
+        <div class="small-12 medium-3 large-3 columns"><%= f.submit %></div>
+    <% end %>
+  </div>
+</div>
